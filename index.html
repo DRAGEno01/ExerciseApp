@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gameoptions">
+        
+        <center>
+            <button onclick="localgame()" id="localButton">Local Game</button>
+            <button onclick="onlinegame()" id="onlineButton">Online Game</button>
+        </center>
+    </div>
+    <div class="gameFrame">
+        <h1 class="texth1boldwhite" id="welcome">Welcome ?</h1>
+        <center>
+            <h1 id="gameStatusText">You need to select a gamemode.</h1>
+        </center>
+    </div>
+
+    <script>
+        var url = window.location.href.split("http://127.0.0.1:5500/index.html?")
+        var spl = url.slice(1)
+        var welcome = document.getElementById("welcome")
+        welcome.innerHTML = "Welcome "+spl
+        var inoqueue = false
+        var inlqueue = false
+        var localbutton = document.getElementById("localButton")
+        var onlinebutton = document.getElementById("onlineButton")
+
+        function localgame(){
+            if(inlqueue===false){
+                document.title = "Join: Local Queue"
+                localbutton.innerHTML = "Leave Queue"
+                alert("Joining Local Queue")
+                alert("You are now in an Local Queue.")
+                inlqueue = true
+            }else{
+                document.title = "Home - Game"
+                localbutton.innerHTML = "Local Game"
+                alert("You have left the queue.")
+                inlqueue = false
+            }  
+        }
+
+        function onlinegame(){
+            if(inoqueue===false){
+                document.title = "In: Online Queue"
+                onlinebutton.innerHTML = "Leave Queue"
+                alert("Joining Online Queue")
+                alert("You are now in an Online Queue.")
+                inoqueue = true
+            }else{
+                document.title = "Home - Game"
+                onlinebutton.innerHTML = "Online Game"
+                alert("You have left the queue.")
+                inoqueue = false
+            }            
+        }
+    </script>
+</body>
+</html>

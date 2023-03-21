@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+body {
+    background-color: #424242;
+}
+button{
+    height: 40px;
+    width: 150px;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Muli',sans-serif;
+}
+
+#gameStatusText {
+    margin-top: 300px;
+    color: white;
+    font-family: 'Muli',sans-serif;
+}
+#localButton {
+    background-color: deepskyblue;
+}
+#onlineButton {
+    background-color: deeppink;
+}
+.texth1boldwhite {
+    color: white;
+    font-family: 'Muli',sans-serif;
+}

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+
+body {
+    background-color: #424242;
+}
+h1 {
+    color: white;
+    font-family: 'Muli',sans-serif;
+    font-size: 60px;
+}
+input {
+    height: 25px;
+    border-radius: 15px;
+}
+button {
+    border-radius: 15px;
+    height: 30px;
+    width: 300px;
+}
+
+.loginForm {
+    background-color: deepskyblue;
+    margin-top: 200px;
+    margin-left: 700px;
+    margin-right: 700px;
+    height: 300px;
+    border-radius: 50px;
+}

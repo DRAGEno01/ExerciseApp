@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <div class="loginForm">
+        <center>
+            <h1>Log In</h1>
+        </center>
+        <br><br>
+        <div class="login">
+            <center>
+                <input placeholder="Username" id="usr">
+                <input placeholder="Password" type="password" id="pass">
+                <br><br>
+                <button onclick="login()">Log In</button>
+            </center>
+        </div>
+    </div>
+
+    <script>
+        var usr = document.getElementById("usr")
+        var pass = document.getElementById("pass")
+
+        function login(){
+            function containsWhitespace(str) {
+                return /\s/.test(str);
+            }
+
+            if(containsWhitespace(usr.value)){
+                window.alert("You cant have SPACES in your USERNAME!")
+            }else{
+            if(usr.value != "" && pass.value != "" && pass.value.length >= 8){
+                    window.alert("You have signed in.")
+                    window.location.replace("./index.html?"+usr.value)
+            }else{
+                window.alert("Must have a USERNAME and a PASSWORD with over 8 characters!")
+            }
+        }
+        }
+    </script>
+</body>
+</html>
